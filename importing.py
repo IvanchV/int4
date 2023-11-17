@@ -1,4 +1,3 @@
-import os
 import re
 
 import requests
@@ -48,7 +47,7 @@ def get_apt_etda(malware_family):
 
 
 def get_virus_total(md5):
-    api_key = os.getenv('API_KEY')
+    api_key = "6a4008aee40403e369363d35234e1b175ae0914f39af94ff97a4ec5dcc3be734"
     url = f"https://www.virustotal.com/api/v3/files/{md5}"
     headers = {'x-apikey': api_key}
     response = requests.get(url, headers=headers)
@@ -63,7 +62,7 @@ def get_virus_total(md5):
 
 
 def get_virus_total_family(md5):
-    api_key = os.getenv('API_KEY')
+    api_key = "6a4008aee40403e369363d35234e1b175ae0914f39af94ff97a4ec5dcc3be734"
     url = f"https://www.virustotal.com/api/v3/files/{md5}"
     headers = {'x-apikey': api_key}
     try:
@@ -82,7 +81,7 @@ def get_virus_total_family(md5):
 
 
 def get_virus_total_class(md5):
-    api_key = os.getenv('API_KEY')
+    api_key = "6a4008aee40403e369363d35234e1b175ae0914f39af94ff97a4ec5dcc3be734"
     url = f"https://www.virustotal.com/api/v3/files/{md5}"
     headers = {'x-apikey': api_key}
     try:
